@@ -1,6 +1,6 @@
 
 body {
-	background-color:rgb(227, 235, 255);
+	background-color:rgb(227, 235, 255);  # BLOCK
 }
 header {
 	background-color:White;
@@ -15,11 +15,36 @@ h4 {
   font-family: Helvetica, serif;
   font-size:30px;
   text-align:center;
+
 }
 .p2 {
   font-family: "Lucida Console", sans-serif;
   font-size:30px;
   text-align:center;
+}
+ul {
+  display:inline-block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#333333;
+}
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;     /* ar parastu inline nebija platums tekstam, vertikalais padding pazud */
+  color: white;		/* atstarpe rodas jo elements navigacija ir zem si pasa a style paddinga. */
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 8px 16px;
+  text-decoration: none;
+
+}
+
+ul li a:hover {
+  background-color: #111111;
 }
 h1 {
 	font-size: 50px;
@@ -27,30 +52,80 @@ h1 {
 	text-align:center;
 }
 h2 {
-	font-size: 60px;
+	font-size: 60px; /* pilniba vis fons tiek apkrasots jo tas ir background-color elements bez platuma tapec tas bus pilna izmera, uzliekot inline-block fona krasa tikai paliek tur kur ir pec formata inline-block
 	line_height: 1.3;
+
 }
 p.section {
 	border-style: outset;
 	border-radius: 5px;
 	border: 4px solid darkblue;
 	padding:25px;
-	margin:0 auto;
+	margin:0 auto; 
 	max-width:12%;
 	text-align:center;
-	font-size: 30px;
+	font-size: 30px; /* BLOCK */
 	line-height: 1;
 	text-align:center;
 	font-family: Helvetica, serif;
 	background-color:White; 
+	display: block;
 	
 }
 p.article {   /*del box model */
 	  background-color: white;
  	  width: 280px;
-  	  border: 4px solid lightblue;  
-  	  padding: 15px;
+  	  border: 4px solid lightblue;   /* block */
+  	  padding: 15px;  	
  	  margin: 0 auto; */ 295 px*/
 	  box-sizing:border-box;
 	  font-family: "Lucida Console", sans-serif;
+	  display: block;
 }
+span.izcelts {
+	width:200px;
+	height:40px;
+	display:inline-block;  /* nekas nemainijas lidz uzrakstiju display block, jo inline nav width un height un kad uzrakstiju block radas horizontala un vertikala atstarpe jo tam ir platums*/
+}		
+form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width:50%;
+}
+
+label {display: block;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+img {
+	display:block;
+	margin:auto; /* none iznem elementu bet hidden paslep to un atstaj to vietu kur bija*/
+	width:50%;
+}
+
+/*  block : sakas uz jaunas linijas, ja, cik vien uzlikts platums, ja nav tad full
+    inline: ne, ne, X
+    inline-block : ja, ja, cik vien uzlikts platums  */
