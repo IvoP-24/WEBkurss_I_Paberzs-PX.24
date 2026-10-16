@@ -4,6 +4,9 @@ body {
 }
 header {
 	background-color:White;
+	display: flex;
+	flex-wrap: wrap;
+	width:390px;
 }
 footer {
 	background-color:#1a5fb4;
@@ -23,7 +26,9 @@ h4 {
   text-align:center;
 }
 ul {
-  display:inline-block;
+  display: flex;
+  justify-content: flex-end;
+ width:500px;           /* flex-start pasa sakuma pabida ieksejo tekstu, center pasa kastes vidu tur visu, space-between no pasa sakuma lidz vidum un beigam liek visu un space-around tikai ar vienadu atstarpi no katra elementa ne no 			kastes borderiem, bez width starpibas nav jo width tikai maina kastes lielumu ne to kas ir ieksa */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -33,6 +38,7 @@ ul li {
   float: left;
 }
 
+
 ul li a {
   display: block;     /* ar parastu inline nebija platums tekstam, vertikalais padding pazud */
   color: white;		/* atstarpe rodas jo elements navigacija ir zem si pasa a style paddinga. */
@@ -40,19 +46,25 @@ ul li a {
   padding: 8px 16px;
   border-radius: 8px 16px;
   text-decoration: none;
-
+}
+nav li {
+display:inline-block;
+gap:20px;
 }
 
 ul li a:hover {
   background-color: #111111;
 }
+
 h1 {
 	font-size: 50px;
 	line-height: 1.6;
 	text-align:center;
 }
 h2 {
-	font-size: 60px; /* pilniba vis fons tiek apkrasots jo tas ir background-color elements bez platuma tapec tas bus pilna izmera, uzliekot inline-block fona krasa tikai paliek tur kur ir pec formata inline-block
+	font-size: 60px; /* pilniba vis fons tiek apkrasots jo tas ir background-color elements bez platuma tapec tas bus 
+
+				pilna izmera, uzliekot inline-block fona krasa tikai paliek tur kur ir pec formata inline-block*/
 	line_height: 1.3;
 
 }
@@ -124,8 +136,33 @@ img {
 	display:block;
 	margin:auto; /* none iznem elementu bet hidden paslep to un atstaj to vietu kur bija*/
 	width:50%;
+
+}
+.galerija {
+	display:grid;
+
+	grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));   /* 1,3,4 kolonas, 150px aiznem 150px vietas un 1fr panem 	1 frakciju pieejamas vietas, tuksas kolonas pazud fit jo bildes maina lielumu lai aiznemtu cik vien vietu cik varetu */
+
+	aspect-ratio: 4/3;
+	object-fit:cover;
+	border-radius 20px;
+
+	/* aspect ratio izveidoja loti lielu atstarpi starp katru bildi */
+     /* frakcijas, ir ritjosla jo px tikai pieskir lielumu un lielums ir pietiekosi zems lai butu ritjosla, ar 1fr nav jo vins atdala frakcijas no pasa ekrana lieluma lai pieskirtu lielumu */
 }
 
 /*  block : sakas uz jaunas linijas, ja, cik vien uzlikts platums, ja nav tad full
     inline: ne, ne, X
     inline-block : ja, ja, cik vien uzlikts platums  */
+
+.liela {
+	grid-column: 1 /3;
+	grid-row: 1 / 3;
+	height:100%; /* parejie atteli nobidas atlikusa briva vieta */
+}
+
+/* Navigacija: flexbox
+   Vizitkarte: flexbox
+   Forma: grid
+   Galerija: grid
+*/
