@@ -1,3 +1,6 @@
+https://ivop-24.github.io/WEBkurss_I_Paberzs-PX.24/
+
+
 N9:
 1. 2.56.0-64.bit versija
 2. IvoP-24
