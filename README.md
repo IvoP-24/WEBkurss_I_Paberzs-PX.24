@@ -12,3 +12,5 @@ N9:
 
 1.5
 2. Jo index ir hardcoded vards hosting saitem kas atvers to pirmo ka primaro lapu
+3. 1 minuti
+4. atteli jo es saliku visu mapes un aizmirsu a href path pievienot mapi pie faila izveels
