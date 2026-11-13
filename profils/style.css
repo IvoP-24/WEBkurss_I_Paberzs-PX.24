@@ -26,76 +26,28 @@ h4 {
   font-size:30px;
   text-align:center;
 }
-ul {
-  display: flex;
-  justify-content: flex-end;
- width:100%;           /* flex-start pasa sakuma pabida ieksejo tekstu, center pasa kastes vidu tur visu, space-between no pasa sakuma lidz vidum un beigam liek visu un space-around tikai ar vienadu atstarpi no katra elementa ne no 			kastes borderiem, bez width starpibas nav jo width tikai maina kastes lielumu ne to kas ir ieksa */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color:#333333;
-  max-width:100%;
-}
-ul li {
+x
   float: left;
 
-}
-
-
-ul li a {
-  display: block;     /* ar parastu inline nebija platums tekstam, vertikalais padding pazud */
-  color: white;		/* atstarpe rodas jo elements navigacija ir zem si pasa a style paddinga. */
-  text-align: center;
-  padding: 8px 16px;
-  border-radius: 8px 16px;
-  text-decoration: none;
-  width:100%;
-  max-width:100%;
-  
-}
-nav li {
-display:inline-block;
-gap:20px;
-}
+}fd
+f
 
 ul li a:hover {
   background-color: #111111;
-}
-
-h1 {
-	font-size: 28px;
-	line-height: 1.4;
-	text-align:center;
-}
-h2 {
-	font-size: 1.5rem; /* pilniba vis fons tiek apkrasots jo tas ir background-color elements bez platuma tapec tas bus 
-
-				pilna izmera, uzliekot inline-block fona krasa tikai paliek tur kur ir pec formata inline-block*/
+sdf
+f
 	line_height: 1.3;
 
-}
-p.section {
+sd
 	border-style: outset;
 	border-radius: 5px;
 	border: 4px solid darkblue;
 	padding:25px;
 	margin:0 auto; 
-	max-width:80%;
-	width:300px;
-	text-align:center;
-	font-size: 30px; /* BLOCK */
+f
 	line-height: 1;
-	font-family: Helvetica, serif;
-	background-color:White; 
-	display: block;
-	overflow-x:hidden;
-	
-	
-}
-p.article {   /*del box model */
-	  background-color: white;
- 	  width: 90%;
-  	  border: 4px solid lightblue;   /* block */
+	font-family: Helvetica, serif;f
+sdf
   	  padding: 15px;  	
  	  margin: 0 auto; */ 295 px*/   
 	  box-sizing:border-box;
